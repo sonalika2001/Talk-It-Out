@@ -25,6 +25,10 @@ class _CustomScrollState extends State<CustomScroll> {
               background: Stack(
                 alignment: Alignment.center,
                 children: [
+                  Container(
+                    color: ka,
+                    // padding: EdgeInsets.only(top:10),
+                  ),
                   Image.network(widget.url, scale: 16 / 9),
                   
                   Column(

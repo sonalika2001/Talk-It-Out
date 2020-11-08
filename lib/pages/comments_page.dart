@@ -29,7 +29,7 @@ class _CommentsPageState extends State<CommentsPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      minimum: EdgeInsets.only(top: 0.06 * MediaQuery.of(context).size.height),
+      minimum: EdgeInsets.only(top: 0.055 * MediaQuery.of(context).size.height),
           child: Scaffold(
         body: CustomScrollView(slivers: <Widget>[
           CustomScroll(
