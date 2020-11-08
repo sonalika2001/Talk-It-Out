@@ -1,16 +1,7 @@
 # talk_it_out
 
-A new Flutter project.
+An implementation of the UI of the topics, comments and threads section of the app.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/sonalika2001/Talk-It-Out/blob/master/images/WhatsApp%20Image%202020-11-08%20at%2021.48.23.jpeg" alt="drawing" width="250"/>
+<img src="https://github.com/sonalika2001/Talk-It-Out/blob/master/images/WhatsApp%20Image%202020-11-08%20at%2021.48.24.jpeg" alt="drawing" width="250"/>
+<img src="https://github.com/sonalika2001/Talk-It-Out/blob/master/images/WhatsApp%20Image%202020-11-08%20at%2021.48.24%20(1).jpeg" alt="drawing" width="250"/>
