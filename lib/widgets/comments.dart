@@ -8,19 +8,19 @@ class Comments extends StatelessWidget {
   Comments(this.comment);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-          left: 10, right: 10, top: 10, bottom: 5),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Container(
-          padding: EdgeInsets.only(
-              left: 20, right: 20, top: 20, bottom: 15),
-          color: ke,
-          child: Text(
-            comment,
-            style: kbodytextstyle,
-          ),
+    var horizontal1 = 0.04*MediaQuery.of(context).size.width;
+    var horizontal2 = 0.03*MediaQuery.of(context).size.width;
+    var horizontal3 = 0.055*MediaQuery.of(context).size.width;
+    var  vertical= 0.025*MediaQuery.of(context).size.width;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: EdgeInsets.only(
+            left: 20, right: 20, top: horizontal3, bottom: 15),
+        color: ke,
+        child: Text(
+          comment,
+          style: kbodytextstyle,
         ),
       ),
     );

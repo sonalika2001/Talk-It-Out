@@ -5,8 +5,12 @@ class Avatars extends StatelessWidget {
   Avatars(this.avatar);
   @override
   Widget build(BuildContext context) {
+    var horizontal1 = 0.04*MediaQuery.of(context).size.width;
+    var horizontal2 = 0.035*MediaQuery.of(context).size.width;
+    var horizontal3 = 0.055*MediaQuery.of(context).size.width;
+    var  vertical= 0.025*MediaQuery.of(context).size.width;
     return Padding(
-        padding: const EdgeInsets.only(top: 10, left: 10),
+        padding: EdgeInsets.only(top: vertical, left:horizontal1 ),
         child: Container(
     child: Image.network(
       avatar,

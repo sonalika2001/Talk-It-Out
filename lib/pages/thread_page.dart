@@ -21,6 +21,10 @@ class ThreadPage extends StatefulWidget {
 class _ThreadPageState extends State<ThreadPage> {
   @override
   Widget build(BuildContext context) {
+    var horizontal1 = 0.06 * MediaQuery.of(context).size.width;
+    var horizontal2 = 0.4 * MediaQuery.of(context).size.width;
+    var horizontal3 = 0.055 * MediaQuery.of(context).size.width;
+    var vertical = 0.14 * MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kbackgroundcolor,
@@ -54,7 +58,11 @@ class _ThreadPageState extends State<ThreadPage> {
                       overflow: Overflow.visible,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 50),
+                          padding: EdgeInsets.only(
+                              left: horizontal3,
+                              right: horizontal3,
+                              top: vertical,
+                              bottom: 5),
                           child: Comments(text().posts[0]),
                         ),
                         Positioned(
@@ -75,7 +83,7 @@ class _ThreadPageState extends State<ThreadPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 15),
+                          padding: EdgeInsets.only(left: horizontal1),
                           child: Container(
                             child: Row(
                               children: [
@@ -108,7 +116,7 @@ class _ThreadPageState extends State<ThreadPage> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: 15),
+                          padding: EdgeInsets.only(right: horizontal1),
                           child: Text(
                             widget.day,
                             style: kdaystyle,
@@ -153,23 +161,23 @@ class _ThreadPageState extends State<ThreadPage> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top:2.5),
+            padding: EdgeInsets.only(top: 2.5),
             color: ke,
-                      child: Container(
-                        color: kbackgroundcolor,
-              
+            child: Container(
+              color: kbackgroundcolor,
               child: Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                        left: 15,
-                        top: 10,
-                        bottom: 10,right: 15),
+                        left: horizontal3, top: 10, bottom: 10),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Container(
                         padding: EdgeInsets.only(
-                            top: 10, left: 10, bottom: 10, right: 0.33 * MediaQuery.of(context).size.width),
+                            top: 10,
+                            left: 10,
+                            bottom: 10,
+                            right: horizontal2),
                         color: ke,
                         child: Text(
                           'Write a Comment...',
@@ -180,8 +188,12 @@ class _ThreadPageState extends State<ThreadPage> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.send,color: kf,size: 30,),
+                      padding: EdgeInsets.symmetric(horizontal:horizontal1),
+                      child: Icon(
+                        Icons.send,
+                        color: kf,
+                        size: 30,
+                      ),
                     ),
                   ),
                 ],

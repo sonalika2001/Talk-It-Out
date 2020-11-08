@@ -16,6 +16,8 @@ class _CustomScrollState extends State<CustomScroll> {
   
   @override
   Widget build(BuildContext context) {
+    var horizontal = 0.035*MediaQuery.of(context).size.width;
+    var  vertical= 0.015*MediaQuery.of(context).size.width;
     return SliverAppBar(
             backgroundColor: Colors.transparent,
             brightness: Brightness.dark,
@@ -81,10 +83,13 @@ class _CustomScrollState extends State<CustomScroll> {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Icon(
-                Icons.arrow_back,
-                color: kbackgroundcolor,
-                size: 30,
+              child: Padding(
+                padding: EdgeInsets.only(left: horizontal,top: vertical),
+                child: Icon(
+                  Icons.arrow_back,
+                  color: kbackgroundcolor,
+                  size: 30,
+                ),
               ),
             ),
             actions: <Widget>[
@@ -93,7 +98,7 @@ class _CustomScrollState extends State<CustomScroll> {
                   Navigator.pushNamed(context, '/extratwo');
                 },
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  padding: EdgeInsets.only(right: horizontal,top: vertical),
                   child: Icon(
                     Icons.notifications_none,
                     color: kbackgroundcolor,

@@ -33,6 +33,8 @@ class InitialScreen extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+      var horizontal = 0.035*MediaQuery.of(context).size.width;
+    var  vertical= 0.015*MediaQuery.of(context).size.width;
     return SafeArea(
       minimum: EdgeInsets.only(top: 0.06 * MediaQuery.of(context).size.height),
       child: Scaffold(
@@ -75,7 +77,7 @@ class InitialScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/extraone');
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                padding: EdgeInsets.only(right: horizontal),
                 child: Icon(
                   Icons.info_outline,
                   color: ka,
@@ -88,7 +90,7 @@ class InitialScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/extratwo');
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                padding: EdgeInsets.only(right: horizontal),
                 child: Icon(
                   Icons.notifications_none,
                   color: ka,

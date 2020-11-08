@@ -4,13 +4,16 @@ import 'package:talk_it_out/widgets/topic_section.dart';
 import '../constants.dart';
 
 class TopicsPage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+    var horizontal = 0.035*MediaQuery.of(context).size.width;
+    var  vertical= 0.015*MediaQuery.of(context).size.width;
     return ListView(
       
         children: <Widget>[
     Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.symmetric(horizontal:horizontal,vertical: vertical),
       child: Text(
         'Trending',
         style: ksubtitlestyle,

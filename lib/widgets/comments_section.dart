@@ -23,6 +23,10 @@ class CommentsSection extends StatefulWidget {
 class _CommentsSectionState extends State<CommentsSection> {
   @override
   Widget build(BuildContext context) {
+    var horizontal1 = 0.04*MediaQuery.of(context).size.width;
+    var horizontal2 = 0.035*MediaQuery.of(context).size.width;
+    var horizontal3 = 0.055*MediaQuery.of(context).size.width;
+    var  vertical= 0.025*MediaQuery.of(context).size.width;
     return Column(
       children: [
         Row(
@@ -31,7 +35,7 @@ class _CommentsSectionState extends State<CommentsSection> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(top: 30, left: 10),
+                padding: EdgeInsets.only(top: 30, left: horizontal2),
                 child: Container(
                   child: Image.network(
                     widget.avatar,
@@ -50,8 +54,8 @@ class _CommentsSectionState extends State<CommentsSection> {
                     overflow: Overflow.visible,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(
-                            left: 10, right: 20, top: 28, bottom: 15),
+                        padding: EdgeInsets.only(
+                            left: horizontal2, right: horizontal3, top: 28, bottom: 15),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Container(
@@ -66,7 +70,7 @@ class _CommentsSectionState extends State<CommentsSection> {
                         ),
                       ),
                       Positioned(
-                        right: 8,
+                        right:12,
                         bottom: 5,
                         child: LikeButton(
                           islike: widget.islike,
@@ -76,7 +80,7 @@ class _CommentsSectionState extends State<CommentsSection> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: horizontal3),
                     child: Text(
                       widget.day,
                       textAlign: TextAlign.left,
@@ -117,10 +121,14 @@ class _CommentsSectionState extends State<CommentsSection> {
                               overflow: Overflow.visible,
                               alignment: Alignment.bottomRight,
                               children: [
-                                Comments(text().posts[1]),
+                                Padding(
+                                  padding: EdgeInsets.only(
+          left: horizontal2, right: horizontal3, top: 10, bottom: 5),
+                                  child: Comments(text().posts[1]),
+                                ),
                                 Positioned(
                                   
-                                  right: 8,
+                                  right: 12,
                                   bottom: -5,
                                   child: LikeButton(
                                     islike: widget.islike,
@@ -146,9 +154,13 @@ class _CommentsSectionState extends State<CommentsSection> {
                               overflow: Overflow.visible,
                               alignment: Alignment.bottomRight,
                               children: [
-                                Comments(text().posts[2]),
+                                Padding(
+                                  padding: EdgeInsets.only(
+          left: horizontal2, right: horizontal3, top: 10, bottom: 5),
+                                  child: Comments(text().posts[2]),
+                                ),
                                 Positioned(
-                                  right: 8,
+                                  right: 12,
                                   bottom: -5,
                                   child: LikeButton(
                                     islike: widget.islike,
@@ -177,7 +189,7 @@ class _CommentsSectionState extends State<CommentsSection> {
                     child: Padding(
                       padding: EdgeInsets.only(
                           left: 0.2 * MediaQuery.of(context).size.width,
-                          top: 10,bottom: 10),
+                          top: vertical,bottom: vertical),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(15),
                         child: Container(

@@ -15,12 +15,13 @@ class _FiltersState extends State<Filters> {
   
   @override
   Widget build(BuildContext context) {
-    
+    var horizontal = 0.035*MediaQuery.of(context).size.width;
+    var  vertical= 0.015*MediaQuery.of(context).size.width;
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: EdgeInsets.only(left:horizontal,top: vertical),
           child: GestureDetector(
             onTap: () {
 
@@ -41,7 +42,7 @@ class _FiltersState extends State<Filters> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: EdgeInsets.only(left:horizontal,top: vertical),
           child: GestureDetector(
             onTap: () {
               setState(() {
@@ -61,7 +62,7 @@ class _FiltersState extends State<Filters> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: EdgeInsets.only(left:horizontal,top: vertical),
           child: GestureDetector(
             onTap: () {
               setState(() {
@@ -81,7 +82,7 @@ class _FiltersState extends State<Filters> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: EdgeInsets.only(left:horizontal,top: vertical),
           child: GestureDetector(
             onTap: () {
               setState(() {

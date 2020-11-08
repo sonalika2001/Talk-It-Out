@@ -25,6 +25,8 @@ class TopicSection extends StatefulWidget {
 class _TopicSectionState extends State<TopicSection> {
   @override
   Widget build(BuildContext context) {
+    var horizontal = 0.04*MediaQuery.of(context).size.width;
+    var  vertical= 0.015*MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -111,7 +113,7 @@ class _TopicSectionState extends State<TopicSection> {
           overflow: Overflow.visible,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15, top: 30),
+              padding: EdgeInsets.only(left: horizontal, right: horizontal, top: 30),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
